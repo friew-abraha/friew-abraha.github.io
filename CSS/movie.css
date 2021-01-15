@@ -1,5 +1,5 @@
 body {
-    background-image: url("../../WAP/images/skeleton_files/background.png");
+    background-image: url("../images/skeleton_files/background.png");
     font-family: Verdana, Tahoma, sans-serif;
     font-size: 8pt;
     margin: 0;
@@ -7,7 +7,7 @@ body {
 }
 
 #Banner {
-    background-image: url("../../WAP/images/skeleton_files/bannerbg.png");
+    background-image: url("../images/skeleton_files/bannerbg.png");
     text-align: center;
 }
 
@@ -54,7 +54,7 @@ body {
 }
 
 #Rotten33 {
-    background-image: url("../../WAP/images/skeleton_files/rbg.png");
+    background-image: url("../WAP/images/skeleton_files/rbg.png");
     font-size: 48pt;
     color: red;
     font-weight: bold;
