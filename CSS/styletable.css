@@ -1,0 +1,39 @@
+table,
+td,
+th {
+    border: 2px solid black;
+}
+
+table {
+    border-collapse: collapse;
+    padding: 30;
+}
+
+td {
+    text-align: center;
+}
+
+h1 {
+    text-align: center;
+    font-size: x-large;
+}
+
+#row1 {
+    background-color: greenyellow;
+}
+
+#row2 {
+    background-color: lightgray;
+}
+
+#row3 {
+    background-color: white;
+}
+
+#row4 {
+    background-color: lightgray;
+}
+
+#row5 {
+    background-color: white;
+}

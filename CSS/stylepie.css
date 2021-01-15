@@ -1,0 +1,38 @@
+body {
+    background-color: white;
+    color: rgb(64, 64, 64);
+    font: 11pt;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
+h1 {
+    text-align: left;
+    font-size: 18pt;
+    color: rgb(164, 164, 0);
+    background-color: rgb(240, 240, 240);
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+#mainh {
+    text-align: center;
+    font-size: 20pt;
+}
+
+a:link {
+    color: rgb(164, 164, 0)
+}
+
+a:visited {
+    color: rgb(164, 164, 0);
+    background-color: transparent;
+    text-decoration: none;
+}
+
+.comment {
+    background-color: rgb(255, 255, 0);
+}
+
+.Copyright {
+    width: 240px;
+    text-align: right;
+}
