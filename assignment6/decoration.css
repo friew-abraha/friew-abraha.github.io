@@ -1,0 +1,38 @@
+body {
+    margin: auto;
+    width: 33%;
+}
+
+fieldset {
+    display: block;
+}
+
+legend {
+    font-weight: bold;
+    font-size: 20px;
+    ;
+}
+
+input {
+    margin-top: 20px;
+}
+
+#myTextarea {
+    font-size: 12pt;
+    text-align: right;
+    text-decoration: underline;
+    color: green;
+    text-decoration-line: left;
+    padding: 20px;
+    font-weight: bold;
+}
+
+.myspan a {
+    text-decoration: none;
+}
+
+.myspan {
+    margin-left: 200px;
+    border: solid 1px gray;
+    padding: 15px, 20px, 15px, 20px;
+}

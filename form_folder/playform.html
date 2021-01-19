@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<!-- saved from url=(0074)http://mumstudents.org/cs472/2019-07-RS/Homework/2/resources/skeleton.html -->
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <base href="https://sbrmgr1.github.io/wap-assignments/">
+    <!-- <base href="file:///Users/samsherrana/Documents/Study Courses/5. WAP/wap-assignments/"> -->
+
+    <title>Form</title>
+
+    <meta name="description" content="form page" />
+    <meta name="keywords" content="wap assignments5" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+
+    <!--  <link rel="stylesheet" type="text/css" href="../CSS/styleplay.css" />-->
+</head>
+
+<body class="main-bg">
+
+    <div class="w-70">
+        <form>
+            <fieldset class="p-15 my-fieldset mb-15 mt-15">
+                <legend class="my-legend">Personal details</legend>
+                <div class="row mb-15 mt-15">
+                    <div class="my-input w-50 float-left">
+                        <label class="required" for="first-name">First Name</label>
+                        <input type="text" id="first-name" name="first_name" placeholder="First Name" />
+                    </div>
+                    <div class="my-input w-50 float-left">
+                        <label class="required" for="last-name">Last Name</label>
+                        <input type="text" id="last-name" name="last_name" placeholder="Last Name" />
+                    </div>
+                </div>
+                <div class="row mb-15">
+                    <div class="my-input w-50 float-left">
+                        <label class="required" for="email">Email</label>
+                        <input type="email" id="email" name="email" placeholder="Email" />
+                    </div>
+                    <div class="my-input w-50 float-left">
+                        <label class="required" for="phone">Phone No</label>
+                        <input type="tel" id="phone" name="phone" placeholder="Phone Number" />
+                    </div>
+                </div>
+                <div class="row mb-15">
+                    <div class="my-input w-50 float-left">
+                        <label class="required" for="gender">Gender</label>
+                        <select name="gender" id="gender">
+							<option value="">Select Gender</option>
+							<option value="m">Male</option>
+							<option value="f">Female</option>
+							<option value="o">Other</option>
+						</select>
+                    </div>
+                    <div class="my-input w-50 float-left">
+                        <label class="required" for="ssn">SSN</label>
+                        <input type="text" id="ssn" name="ssn" placeholder="Social Security Number" />
+                    </div>
+                </div>
+                <div class="row mb-30">
+                    <div class="my-input w-50 float-left">
+                        <label class="required" for="dob">Date of birth</label>
+                        <input type="date" id="dob" name="dob" />
+                    </div>
+                </div>
+            </fieldset>
+            <fieldset class="p-15 my-fieldset mb-15">
+                <legend class="my-legend">Billing Address</legend>
+                <div class="row mb-15 mt-15">
+                    <div class="my-input w-50 float-left">
+                        <label class="required" for="bil-street">Street</label>
+                        <input type="text" id="bil-street" name="billing_street" placeholder="Street Address" />
+                    </div>
+                    <div class="my-input w-50 float-left">
+                        <label class="required" for="bil-city">City</label>
+                        <input type="text" id="bil-city" name="billing_city" placeholder="City" />
+                    </div>
+                </div>
+                <div class="row mb-30">
+                    <div class="my-input w-50 float-left">
+                        <label class="required" for="bil-state">State</label>
+                        <input type="text" id="bil-state" name="billing_state" placeholder="State" />
+                    </div>
+                    <div class="my-input w-50 float-left">
+                        <label class="required" for="bil-zipcode">ZipCode</label>
+                        <input type="text" id="bil-zipcode" name="billing_zipcode" placeholder="Zip Code" />
+                    </div>
+                </div>
+            </fieldset>
+            <fieldset class="p-15 my-fieldset mb-15">
+                <legend class="my-legend">Shipping Address</legend>
+                <div class="row mb-15 mt-15">
+                    <div class="my-input w-50 float-left">
+                        <label class="required" for="ship-street">Street</label>
+                        <input type="text" id="ship-street" name="shipping_street" placeholder="Street Address" />
+                    </div>
+                    <div class="my-input w-50 float-left">
+                        <label class="required" for="ship-city">City</label>
+                        <input type="text" id="ship-city" name="shipping_city" placeholder="City" />
+                    </div>
+                </div>
+                <div class="row mb-15">
+                    <div class="my-input w-50 float-left">
+                        <label class="required" for="ship-state">State</label>
+                        <input type="text" id="ship-state" name="shipping_state" placeholder="State" />
+                    </div>
+                    <div class="my-input w-50 float-left">
+                        <label class="required" for=ship-zipcode>ZipCode</label>
+                        <input type="text" id="ship-zipcode" name="shipping_zipcode" placeholder="Zip Code" />
+                    </div>
+                </div>
+            </fieldset>
+            <fieldset class="p-15 my-fieldset mb-15">
+                <legend class="my-legend">Payment Info</legend>
+                <div class="row mb-15 mt-15">
+                    <div class="my-input w-50 float-left">
+                        <label class="required" for="payment-info">Select Payment Info</label>
+                        <select id="payment-info" name="payment_info">
+							<option value="card">By Credit Card</option>
+							<option value="check">By Visa Card</option>
+							<option value="cash">By Cash</option>
+						</select>
+                    </div>
+                </div>
+            </fieldset>
+            <fieldset class="p-15 my-fieldset mb-15">
+                <legend class="my-legend">Agreement</legend>
+                <div class="row mb-15 mt-15">
+                    <div class="my-input w-50 float-left">
+                        <label>
+							<input type="checkbox" name="agreement">
+							I agree with all privary policy and terms and conditions.
+						</label>
+                    </div>
+                </div>
+            </fieldset>
+            <div class="row">
+                <div class="p-15">
+                    <button type="submit" class="btn-black">Submit</button>
+                </div>
+            </div>
+        </form>
+    </div>
+    <div class="validator-section">
+        <p>
+            <a href="https://validator.w3.org/check/referer">
+                <img src="http://mumstudents.org/cs472/images/w3c-html.png" alt="Validate" />
+            </a>
+            <br/>
+            <a href="https://jigsaw.w3.org/css-validator/check/referer">
+                <img src="https://jigsaw.w3.org/css-validator/images/vcss" alt="Validate" />
+            </a>
+        </p>
+    </div>
+
+</body>
+
+</html>

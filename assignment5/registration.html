@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Registration</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="../CSS/reg_style.css" rel="stylesheet">
+</head>
+
+<body>
+
+    <div class="regform">
+        <h1>Registration Form </h1>
+    </div>
+    <div class="main">
+        <form>
+            <div id="fname">
+                <div class="inputRow">
+                    <label class="firstlabel">First name</label>
+
+                    <input class="firstname" type="text" name="first_name" required /><br/>
+                </div>
+                <div class="inputmname">
+                    <label class="mname">Middle name(optional)</label>
+                    <input class="middlename" type="rext" name="middle_name" optional><br/>
+                </div>
+                <div class="inputlname">
+                    <label class="lname">Last name</label>
+                    <input class="lastname" type="rext" name="last_name" /><br>
+                </div>
+                <div class="Residential">
+                    <label class="raddress">Ressidential address line 1</label>
+                    <input class="address" type="text" name="Raddress" /><br>
+                </div>
+                <div id="addr">
+
+                    <label class="cty">City</label>
+                    <input class="city" type="text" name="cite">
+
+                    <label class="state">State</label>
+                    <select class="option" name="State">
+                        <option></option>
+                         <option>Albama</option>
+                         <option>Alaska</option>
+                         <option>Arizona</option>
+                         <option>Arkansas</option>
+                         <option>California</option>
+                         <option>Colorado</option>
+                         <option>Connecticut</option>
+                         <option>Delware</option>
+                         <option>Florida</option>
+                         <option>Gorgia</option>
+                         <option>Hawawi</option>
+                    </select>
+
+
+                    <label class="zcode">ZipCode</label>
+                    <input class="zip" type="number" name="zcode" pattern="^\d{5}$" required><br/>
+
+                    <div class="pn">
+                        <label class="pnumber">Primary Phone number</label>
+                        <input class="phone" type="number" name="Pnumber" /> <br/>
+
+                    </div>
+                    <br>
+                    <div class="radioph">
+                        <input type="radio" name="cc" value="mobile phone" /> Phone number
+
+                        <input type="radio" name="cc" value="home phone" /> Home number
+                    </div>
+                    <div>
+                        <button type="submit">Submit</button>
+                    </div>
+
+        </form>
+
+        </div>
+</body>
+
+</html>

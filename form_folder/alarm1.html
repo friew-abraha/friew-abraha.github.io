@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title></title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="../CSS/alarm.css" rel="stylesheet">
+
+    <body id="mybody">
+
+
+
+        <script>
+            function startTimer() {
+                var min = parseFloat(document.getElementById("field1").value);
+                var sec = parseFloat(document.getElementById("field2").value);
+
+                var totalTime = min * 60 + sec;
+                var minutes, seconds;
+                var settter = setInterval(function() {
+                    minutes = parseInt(totalTime / 60, 10)
+                    seconds = parseInt(totalTime % 60, 10);
+                    minutes = minutes < 10 ? "0" + minutes : minutes;
+                    seconds = seconds < 10 ? "0" + seconds : seconds;
+                    document.getElementById("field1").value = minutes;
+                    document.getElementById("field2").value = seconds;
+                    if (--totalTime < 0) {
+                        document.getElementById("mybody").style.backgroundColor = "red";
+                        clearInterval(settter);
+                    }
+                }, 1000);
+            }
+        </script>
+
+
+
+        <input type="text" id="field1" /> Min<br> <br>
+        <input type="text" id="field2" /> Sec<br> <br>
+        <button onclick="startTimer()">Start Timer</button>
+        <p> Please start the timer and will change the back ground to red when it reaches 00:00 !</p>
+    </body>
+
+</html>

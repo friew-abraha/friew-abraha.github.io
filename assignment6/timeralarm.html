@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
+
+    <titl>
+        </title>
+
+        <link href="../CSS/alarm.css" type="text/css" rel="stylesheet">
+</head>
+
+</head>
+
+<body id="mybody">
+
+    <h1>
+        <img id="logo" src="../images/timer.gif" width="150px" height="150px" alt="UW CSE logo"> Timer Alarm
+    </h1>
+
+    <script>
+        function startTimer() {
+            var min = parseFloat(document.getElementById("field1").value);
+            var sec = parseFloat(document.getElementById("field2").value);
+
+            var totalTime = min * 60 + sec;
+            var minutes, seconds;
+            var settter = setInterval(function() {
+                minutes = parseInt(totalTime / 60, 10)
+                seconds = parseInt(totalTime % 60, 10);
+                minutes = minutes < 10 ? "0" + minutes : minutes;
+                seconds = seconds < 10 ? "0" + seconds : seconds;
+                document.getElementById("field1").value = minutes;
+                document.getElementById("field2").value = seconds;
+                if (--totalTime < 0) {
+                    document.getElementById("mybody").style.backgroundColor = "green";
+                    document.getElementById("field1").style.backgroundColor = "blue";
+                    document.getElementById("field2").style.backgroundColor = "blue";
+                    document.getElementById("btn").style.backgroundColor = "red";
+                    clearInterval(settter);
+                }
+            }, 1000);
+        }
+    </script>
+
+
+
+    <input type="text" id="field1" /> Min<br> <br>
+    <input type="text" id="field2" /> Sec<br> <br>
+    <button onclick="startTimer()" id="btn">Start Timer</button>
+
+
+    <p> When timeout, the back ground will change color!
+</body>
+
+</html>
