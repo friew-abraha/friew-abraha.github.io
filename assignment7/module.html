@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title></title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="module.css" rel="stylesheet">
+    <script>
+        function myFunction() {
+            const nam = "Account name";
+            var account_name = document.getElementById("accountName").value;
+            var deposit = document.getElementById("depo").value;
+            var arr = [];
+            for (let result = 0; result <= document.getElementById("text_area.length"); result++) {
+                arr[result] = nam + ": " + account_name + " " + deposit;
+                document.getElementById("accountScreen").innerHTML += arr[result] + "\n";
+            };
+        }
+    </script>
+</head>
+
+<body>
+    <span class="home"> <a href="../index.html">Home </a></span>
+    <form>
+
+        <p id="title">Account form</p>
+        <label for="accountName">Account Name:</label>
+        <input id="accountName" type="text" name="accountName" placeholder="business" /><br/><br/>
+        <label for="accountName">Deposit:</label>
+        <input id="depo" type="text" name="deposit" placeholder="10000" /><br/><br/>
+        <div>
+            <button type="button" onclick="myFunction()">Creat New Account</button>
+            <!--   <input id="newAccount" type="button" value="Create New Account" /><br/><br/>-->
+        </div>
+        <br/>
+        <div>
+            <textarea name="text_area" id="accountScreen" cols="35" rows="10">
+         
+        </textarea>
+        </div>
+    </form>
+
+
+    <a href="https://webster.cs.washington.edu/jslint/?referer">
+        <img src="https://webster.cs.washington.edu/w3c-js.png" alt="Valid JS" />
+    </a>
+
+</body>
+
+</html>

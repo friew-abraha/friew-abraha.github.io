@@ -1,0 +1,32 @@
+form {
+    padding: 6px;
+    border-left: 6px solid green;
+    height: 330px;
+    text-align: left;
+    margin-left: 800px;
+}
+
+.home {
+    padding: 6px;
+    text-align: left;
+    font-weight: bold;
+    text-decoration: none;
+    color: rgb(145, 98, 11);
+}
+
+.home:hover {
+    text-decoration: underline;
+    color: rgb(12, 61, 94);
+}
+
+#accountScreen {
+    padding: 6px;
+    width: 400px;
+    text-align: left;
+    margin-left: 0px;
+    padding-left: 0px;
+}
+
+body {
+    text-align: center;
+}

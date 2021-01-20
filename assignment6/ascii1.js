@@ -1,93 +1,43 @@
-(function() {
+"use strict";
+var delay = 250;
+var timerID = "";
+var originalText = "";
 
-    let Anim_Type = "";
+function setSize() {
+    var selectedSizeIndex = document.getElementById("size").selectedIndex;
 
-    "use strict"
-    window.onload = function() {
-        document.getElementById("animation").onchange = getAnimationPage;
-        document.getElementById("fontsize").onchange = setAnimationSize;
-        document.getElementById("start").onclick = animationLooper;
-        document.getElementById("stop").onclick = animationStopper;
-    };
+    if (selectedSizeIndex == "0") { document.getElementById("textarea").style.fontSize = "7pt"; } else if (selectedSizeIndex == "1") { document.getElementById("textarea").style.fontSize = "10pt"; } else if (selectedSizeIndex == "2") { document.getElementById("textarea").style.fontSize = "12pt"; } else if (selectedSizeIndex == "3") { document.getElementById("textarea").style.fontSize = "16pt"; } else if (selectedSizeIndex == "4") { document.getElementById("textarea").style.fontSize = "24pt"; } else { document.getElementById("textarea").style.fontSize = "32pt"; }
+}
 
-    function getAnimationPage() {
-        let e = document.getElementById("animation");
-        let v = document.getElementById("text-area");
-        if (e.value === "Blank") {
-            v.innerHTML = BLANK;
-        } else if (e.value === "Exercise") {
-            Anim_Type = EXERCISE;
-            v.innerHTML = EXERCISE.split("=====")[0];
+function stopAnimation() {
+    clearInterval(timerID);
+    document.getElementById("btnstart").disabled = false;
+    document.getElementById("animtype").disabled = false;
+    originalText = document.getElementById("textarea").value = originalText;
+}
 
-        } else if (e.value === "Juggler") {
-            Anim_Type = JUGGLER;
-            v.innerHTML = JUGGLER.split("=====")[0];
+function turboCharger() {
+    if (document.getElementById("turbo").checked === true) { delay = 100; } else { delay = 250; }
+    animationTypeIdentifier();
+}
 
-        } else if (e.value === "Bike") {
-            Anim_Type = BIKE;
-            v.innerHTML = BIKE.split("=====")[0];
+function animationTypeIdentifier() {
+    setSize();
+    document.getElementById("btnstop").disabled = false;
+    document.getElementById("btnstart").disabled = true;
+    document.getElementById("animtype").disabled = true;
+    clearInterval(timerID);
+    originalText = document.getElementById("textarea").value;
+    var animType = document.getElementById("animtype").value;
 
-        } else if (e.value === "Dive") {
-            Anim_Type = DIVE;
-            v.innerHTML = DIVE.split("=====")[0];
+    if (animType == "blank") { document.getElementById("textarea").value = ""; } else if (animType == "juggler") { displayAnimation("juggler"); } else if (animType == "exercise") { displayAnimation("exercise"); } else if (animType == "dive") { displayAnimation("dive"); } else if (animType == "bike") { displayAnimation("bike"); } else if (animType == "custom") { return; } else { return; }
+}
 
-        }
-    }
-
-    function setAnimationSize() {
-        let e = document.getElementById("fontsize");
-        let v = document.getElementById("text-area");
-        if (e.value === "Tiny") {
-            v.style.fontSize = "7pt";
-        } else if (e.value === "Small") {
-            v.style.fontSize = "10pt";
-        } else if (e.value === "Medium") {
-            v.style.fontSize = "12pt";
-        } else if (e.value === "Large") {
-            v.style.fontSize = "16pt";
-        } else if (e.value === "Extra Large") {
-            v.style.fontSize = "24pt";
-        } else if (e.value === "XXL") {
-            v.style.fontSize = "42pt";
-        }
-    }
-
-    var x = null;
-    var i;
-    let first_array = "";
-
-    function animationLooper() {
-        let v = document.getElementById("text-area");
-        let arr = Anim_Type.split("=====");
-        first_array = arr[0];
-        let s;
-        if (document.getElementById("turbo").checked) {
-            s = 40;
-        } else {
-            s = 250;
-        }
-        x = setInterval(myAnimate, s);
-
-        function myAnimate() {
-            if (i === undefined) {
-                i = 0;
-            } else if (i < (arr.length - 1)) {
-                i = i + 1;
-            } else if (i === (arr.length - 1)) {
-                i = 0;
-            }
-            v.innerHTML = arr[i];
-            document.getElementById("start").disabled = true;
-            document.getElementById("animation").disabled = true;
-        }
-    }
-
-    function animationStopper() {
-        clearInterval(x);
-        getAnimationPage();
-        document.getElementById("text-area").innerHTML = first_array;
-        document.getElementById("start").disabled = false;
-        document.getElementById("animation").disabled = false;
-    }
-
-})();
+function displayAnimation(animationType) {
+    if (animationType == "blank") { return; } else if (animationType == "juggler") { var splitted = ANIMATIONS["juggler"].split("=====\n"); } else if (animationType == "exercise") { var splitted = ANIMATIONS["exercise"].split("=====\n"); } else if (animationType == "dive") { var splitted = ANIMATIONS["dive"].split("=====\n"); } else if (animationType == "bike") { var splitted = ANIMATIONS["bike"].split("=====\n"); } else { return; }
+    var index = 0;
+    timerID = setInterval(function display() {
+        document.getElementById("textarea").value = splitted[index++];
+        if (index >= splitted.length) { index = 0; }
+    }, delay);
+}

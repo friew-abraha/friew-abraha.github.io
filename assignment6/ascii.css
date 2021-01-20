@@ -1,18 +1,24 @@
-.container {
-    width: 960px;
-    margin: 0 auto;
+body {
+    background-color: #CCCCFF;
+    font-family: sans-serif;
+    font-size: 14pt;
+    font-weight: bold;
 }
 
 header {
-    font-size: 25pt;
-    font-weight: bold;
-    margin: 0px;
+    font-size: 32pt;
+    text-align: center;
+    margin: 0pt;
+}
+
+header span {
+    margin-left: 100px;
 }
 
 .home {
     margin-left: 0px;
     text-decoration: none;
-    color: mediumblue;
+    color: rgb(145, 98, 11);
 }
 
 .home:hover {
@@ -20,38 +26,37 @@ header {
     color: rgb(12, 61, 94);
 }
 
-header span {
-    margin-left: 100px;
-}
-
-#text-area {
-    font-family: Arial, Helvetica, sans-serif;
+#textarea {
+    width: 55%;
+    height: 400px;
+    font-family: monospace;
     font-size: 12pt;
-    width: 100%;
 }
 
 fieldset {
+    border: solid;
+    border-color: black;
+    border-width: 5px;
     display: inline;
-    border: 3px solid rgb(34, 33, 33);
+    /* vertical alignment */
+    /* inline */
 }
 
-button {
-    width: 45%;
-}
-
-body {
-    font-weight: bold;
+#container {
     text-align: center;
-    background-color: #CCCCFF;
-    font-family: sans-serif;
-    font-size: 14pt;
 }
 
-select {
-    width: 98%;
+
+/* .validator{
+    
+} */
+
+#controls {
+    display: inline;
 }
 
-#validate {
-    right: 0px;
+#validator {
     position: fixed;
+    right: 0;
+    bottom: 0;
 }
