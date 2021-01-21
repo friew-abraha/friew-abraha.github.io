@@ -1,4 +1,5 @@
 form {
+    vertical-align: middle;
     padding: 6px;
     border-left: 2px solid green;
     height: 330px;
@@ -17,6 +18,10 @@ form {
 .home:hover {
     text-decoration: underline;
     color: rgb(12, 61, 94);
+}
+
+header {
+    vertical-align: middle;
 }
 
 header span {
