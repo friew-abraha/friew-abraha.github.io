@@ -19,6 +19,10 @@ form {
     color: rgb(12, 61, 94);
 }
 
+header span {
+    margin-left: 100px;
+}
+
 #accountScreen {
     padding: 6px;
     width: 400px;
