@@ -1,0 +1,53 @@
+body {
+    background-color: #f0f0f0;
+}
+
+body * {
+    border-radius: 5px;
+}
+
+h1 {
+    text-align: center;
+}
+
+.list {
+    float: left;
+    width: 50%;
+}
+
+.controls {
+    float: left;
+    padding-right: 5%;
+}
+
+fieldset,
+#display {
+    width: 60%;
+    margin: auto;
+    padding: 1%;
+}
+
+#display {
+    width: 62%;
+    padding: 0%;
+    margin-top: 2%
+}
+
+textarea {
+    width: 99%;
+    border: 5px double;
+    background-color: black;
+    color: white;
+}
+
+legend {
+    margin: auto;
+}
+
+input[type=button] {
+    background-color: #f0f0f0;
+}
+
+.create {
+    width: 100%;
+}
