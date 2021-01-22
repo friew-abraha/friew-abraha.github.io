@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>bikes</title>
+    <link href="bicycle.css" rel="stylesheet" />
+    <script src="bicycle.js"></script>
+</head>
+
+<body>
+    <h1>Inheritance in JS</h1>
+    <h1><span><a href="../index.html">Home</a></span></h1>
+    <fieldset>
+        <legend>Bike Controls</legend>
+        <div class="bike controls">
+            <input class="create" type="button" name="create-bike" value="Create Bike" />
+            <form>
+                <input type="button" name="speedup" value="Speed Up" />
+                <input type="text" name="speedVal" />
+            </form>
+            <form>
+                <input type="button" name="brake" value="Apply Brake" />
+                <input type="text" name="brakeVal" />
+            </form>
+        </div>
+        <select class="bike list" multiple></select>
+    </fieldset>
+
+    <fieldset>
+        <legend>Mountain Bike Controls</legend>
+        <div class="mountainbike controls">
+            <input class="create" type="button" name="create-mountainbike" value="Create Mountain Bike" />
+            <form>
+                <input type="button" name="speedup" value="Speed Up" />
+                <input type="text" name="speedVal" />
+            </form>
+            <form>
+                <input type="button" name="brake" value="Apply Brake" />
+                <input type="text" name="brakeVal" />
+            </form>
+            <form>
+                <input type="button" name="gear" value="Change Gear" />
+                <input type="text" name="gearVal" />
+            </form>
+        </div>
+        <select class="mountainbike list" multiple></select>
+    </fieldset>
+    <div id="display">
+        <legend>Current State</legend>
+        <textarea rows="30">
+		</textarea>
+    </div>
+</body>
+
+</html>
